@@ -29,7 +29,7 @@ namespace task1_3
 
             using (var unitOfWork = new UnitOfWork(new ComixContext()))
             {
-                // виведення всіх коміксів та їх ціни
+                // printing all comics and their prices
                 var comics = unitOfWork.Comics.GetAll();
                 foreach (Comix u in comics)
                 {
@@ -39,7 +39,7 @@ namespace task1_3
             
             using (var unitOfWork = new UnitOfWork(new ComixContext()))
             {
-                // виведення всіх коміксів і їх авторів
+                // printing all comics and their authors
                 var comix_get = unitOfWork.Comics.GetAllComicsWithAuthor();
                 foreach (Comix cm in comix_get)
                     Console.WriteLine($"{cm.Name} - {cm.Author?.Name}");
@@ -47,7 +47,7 @@ namespace task1_3
             
             using (var unitOfWork = new UnitOfWork(new ComixContext()))
             {
-                // виведення назви коміксів конкретного автора
+                // printing name of comics of the particular author
                 var authors = unitOfWork.Authors.GetAuthorWithAllComix("Andrii Mudrak");
                 foreach (Author a in authors)
                 {

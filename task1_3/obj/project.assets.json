@@ -3679,11 +3679,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Андрій\\Desktop\\task1_3\\task1_3\\task1_3.csproj",
+      "projectUniqueName": "C:\\Users\\Андрій\\Desktop\\ComicsLibrary\\task1_3\\task1_3.csproj",
       "projectName": "task1_3",
-      "projectPath": "C:\\Users\\Андрій\\Desktop\\task1_3\\task1_3\\task1_3.csproj",
+      "projectPath": "C:\\Users\\Андрій\\Desktop\\ComicsLibrary\\task1_3\\task1_3.csproj",
       "packagesPath": "C:\\Users\\Андрій\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Андрій\\Desktop\\task1_3\\task1_3\\obj\\",
+      "outputPath": "C:\\Users\\Андрій\\Desktop\\ComicsLibrary\\task1_3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
