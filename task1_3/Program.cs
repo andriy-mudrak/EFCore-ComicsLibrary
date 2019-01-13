@@ -42,7 +42,9 @@ namespace task1_3
                 // printing all comics and their authors
                 var comix_get = unitOfWork.Comics.GetAllComicsWithAuthor();
                 foreach (Comix cm in comix_get)
+                {
                     Console.WriteLine($"{cm.Name} - {cm.Author?.Name}");
+                }
             }
             
             using (var unitOfWork = new UnitOfWork(new ComixContext()))
@@ -63,7 +65,7 @@ namespace task1_3
             {
                 var author = new Author { Id = 4 };
                 unitOfWork.Authors.Remove(author);
-
+                unitOfWork.SaveChanges();
             }
 
             Console.ReadLine();
