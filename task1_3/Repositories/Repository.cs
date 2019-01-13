@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace task1_3.Repositories
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class Repository<TEntity, Tcontext> : IRepository<TEntity> where TEntity : class
+        where Tcontext: DbContext
     {
-        protected readonly DbContext Context;
+        protected readonly Tcontext Context;
         
-        public Repository(DbContext context)
+        public Repository(Tcontext context)
         {
             Context = context;
         }
