@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using task1_3.Tables;
-
+using System.Configuration;
 
 namespace task1_3
 {
@@ -17,11 +17,11 @@ namespace task1_3
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("" +
-                "Server=DESKTOP-72K0F26;" +
-                "Database=ComicsLibrary;" +
-                "Trusted_Connection=True;");
+            if (!optionsBuilder.IsConfigured)
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["connection_string"].ConnectionString;
+                optionsBuilder.UseSqlServer(connectionString);
+            }
         }
-        
     }
 }
