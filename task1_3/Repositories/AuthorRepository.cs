@@ -19,6 +19,14 @@ namespace task1_3.Repositories
                 .ToList();
 
         }
-        
+
+        public IEnumerable<Author> GetAuthor(string AuthorName)
+        {
+            return Context.Authors                
+                .Where(a => a.Name == AuthorName)
+                .ToList();
+
+        }
+
     }
 }

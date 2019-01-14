@@ -22,6 +22,13 @@ namespace task1_3.Repositories
             return Context.Comics.Include(c => c.Author).ToList();
             
         }
-        
+        public IEnumerable<Comix> GetComix(string ComixName)
+        {
+            return Context.Comics
+                .Where(a => a.Name == ComixName)
+                .ToList();
+
+        }
+
     }
 }

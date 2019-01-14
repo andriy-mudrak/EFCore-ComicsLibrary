@@ -7,5 +7,6 @@ namespace task1_3.Repositories
     {
         IEnumerable<Comix> GetTopCostComics(int count);
         IEnumerable<Comix> GetAllComicsWithAuthor();
+        IEnumerable<Comix> GetComix(string ComixName);
     }
 }
