@@ -36,7 +36,7 @@ namespace task1_3
                     Console.WriteLine($"{u.Id}.{u.Name} - {u.Price}");
                 }
             }
-            
+
             using (var unitOfWork = new UnitOfWork(new ComixContext()))
             {
                 // printing all comics and their authors
@@ -46,21 +46,21 @@ namespace task1_3
                     Console.WriteLine($"{cm.Name} - {cm.Author?.Name}");
                 }
             }
-            
+
             using (var unitOfWork = new UnitOfWork(new ComixContext()))
             {
                 // printing name of comics of the particular author
                 var authors = unitOfWork.Authors.GetAuthorWithAllComix("Andrii Mudrak");
                 foreach (Author a in authors)
                 {
-                    Console.WriteLine($"Author: {a.Name} "); 
+                    Console.WriteLine($"Author: {a.Name} ");
                     foreach (Comix cm in a.Comics)
                     {
                         Console.WriteLine($"Comix: {cm.Name}");
                     }
                 }
             }
-            
+
             using (var unitOfWork = new UnitOfWork(new ComixContext()))
             {
                 var author = new Author { Id = 4 };
