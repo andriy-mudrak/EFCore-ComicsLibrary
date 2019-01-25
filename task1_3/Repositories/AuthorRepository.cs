@@ -14,8 +14,8 @@ namespace task1_3.Repositories
         public IEnumerable<Author>  GetAuthorWithAllComix(string AuthorName)
         {
             return Context.Authors
+                .Where( a => a.Name == AuthorName )
                 .Include(a => a.Comics)
-                .Where(a => a.Name == AuthorName)
                 .ToList();
 
         }

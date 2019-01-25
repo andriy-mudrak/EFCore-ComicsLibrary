@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace task1_3.Repositories
 {
+    //manage CRUD 
     public class Repository<TEntity, Tcontext> : IRepository<TEntity> where TEntity : class
         where Tcontext: DbContext
     {

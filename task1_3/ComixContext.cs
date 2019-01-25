@@ -27,7 +27,7 @@ namespace task1_3
             if (!optionsBuilder.IsConfigured)
             {
                 string connectionString = ConfigurationManager.ConnectionStrings["connection_string"].ConnectionString;
-                optionsBuilder.UseSqlServer(connectionString);
+                optionsBuilder.UseSqlServer(connectionString);//open
 
             }
         }

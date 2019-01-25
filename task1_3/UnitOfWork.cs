@@ -2,7 +2,7 @@
 
 namespace task1_3
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ComixContext _context;
 
