@@ -55,7 +55,7 @@ namespace task1_3.UI
                 unitOfWork.Authors.Remove( author );
                 unitOfWork.SaveChanges();
             }
-            Console.WriteLine( $"Автор з ID: {id} видалений" );
+            Console.WriteLine( $"Author with ID: {id} was deleted" );
 
         }
 
